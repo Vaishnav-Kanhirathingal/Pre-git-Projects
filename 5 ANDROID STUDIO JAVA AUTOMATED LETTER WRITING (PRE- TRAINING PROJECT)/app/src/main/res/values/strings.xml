@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PRACTICE SET</string>
+    <string name="profilepic">profilePic</string>
+    <string name="tableside">tableSide</string>
+    <string name="button">Button</string>
+    <string name="last_name">Last Name</string>
+    <string name="recruiter">Recruiter -</string>
+</resources>
