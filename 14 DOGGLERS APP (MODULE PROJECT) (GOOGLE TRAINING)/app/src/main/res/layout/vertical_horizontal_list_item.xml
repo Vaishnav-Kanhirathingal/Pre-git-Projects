@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TODO: Note that, unlike the grid view list, one card in the vertical and horizontal
+               lists effectively take up the width of the screen. This means you have more
+               room to display information spanning the width of the card.-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dog_image"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dog_name_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_constraintLeft_toLeftOf="@id/dog_image"
+            app:layout_constraintTop_toBottomOf="@id/dog_image" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/dog_name_text_view"
+            app:layout_constraintLeft_toLeftOf="@id/dog_image"
+            app:layout_constraintRight_toRightOf="@id/dog_image">
+        <TextView
+            android:id="@+id/dog_age_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            app:layout_constraintLeft_toLeftOf="@id/dog_image"
+            app:layout_constraintTop_toBottomOf="@id/dog_name_text_view" />
+
+        <TextView
+            android:id="@+id/dog_hobbies_text_view"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/dog_age_text_view"
+            app:layout_constraintRight_toRightOf="@id/dog_image"
+            app:layout_constraintTop_toTopOf="@id/dog_age_text_view" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
